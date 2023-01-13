@@ -13,7 +13,7 @@ public class SecurePropertiesWrapper {
 		String line;
 		Process process;
 
-		String toolString = "java -jar " + appHome + "/secure-properties-tool.jar string " + operation + " " + algorithm + " " + mode + " " + key + " ";
+		String toolString = "java -cp " + appHome + "/secure-properties-tool.jar com.mulesoft.tools.SecurePropertiesTool string " + operation + " " + algorithm + " " + mode + " " + key + " ";
 		//System.out.print(toolString + "\n");
 		try {
 			value = value.replace("%", "%%");
@@ -39,7 +39,7 @@ public class SecurePropertiesWrapper {
 		String line;
 		Process process;
 
-		String toolString = "java -jar " + appHome + "/secure-properties-tool.jar file " + operation + " " + algorithm + " " + mode + " " + key + " " + inputFileLocation + " " + appHome + "/" + outputFile;
+		String toolString = "java -cp " + appHome + "/secure-properties-tool.jar com.mulesoft.tools.SecurePropertiesTool file " + operation + " " + algorithm + " " + mode + " " + key + " " + inputFileLocation + " " + appHome + "/" + outputFile;
 		try {
 
 			process = Runtime.getRuntime().exec(String.format(toolString));
@@ -64,7 +64,7 @@ public class SecurePropertiesWrapper {
 		String line;
 		Process process;
 
-		String toolString = "java -jar " + appHome + "/secure-properties-tool.jar file-level " + operation + " " + algorithm + " " + mode + " " + key + " " + inputFileLocation + " " + appHome + "/" + outputFile;
+		String toolString = "java -cp " + appHome + "/secure-properties-tool.jar com.mulesoft.tools.SecurePropertiesTool file-level " + operation + " " + algorithm + " " + mode + " " + key + " " + inputFileLocation + " " + appHome + "/" + outputFile;
 		try {
 
 			process = Runtime.getRuntime().exec(String.format(toolString));

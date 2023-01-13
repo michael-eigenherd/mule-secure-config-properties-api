@@ -30,7 +30,9 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration/>
+				<configuration>
+					<classifier>mule-application</classifier>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -90,14 +92,13 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
-			<groupId>b85b361d-0842-4b70-af37-2723c2c3ae7e</groupId>
-			<artifactId>Secure-Properties-API</artifactId>
-			<version>2.0.3</version>
+			<groupId>5553b54e-2d81-470f-8294-3b9882741d72</groupId>
+			<artifactId>secure-properties-api</artifactId>
+			<version>1.0.0</version>
 			<classifier>raml</classifier>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
-
 	<repositories>
 		<repository>
 			<id>anypoint-exchange-v2</id>
